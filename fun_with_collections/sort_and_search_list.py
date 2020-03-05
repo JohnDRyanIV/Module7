@@ -12,7 +12,13 @@ def search_list(a, item):  # Return the index of the object in the list
     :param item: item the list is being searched for
     :return: index of object if found, -1 otherwise
     """
-    pass
+    for i in range(0, len(a)):
+        try:
+            if a[i] == item:
+                return i
+        except TypeError:
+            pass
+    return -1
 
 
 if __name__ == '__main__':
