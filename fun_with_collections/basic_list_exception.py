@@ -2,12 +2,11 @@ def make_list():
     a = []
     i = 0
     while i < 3:
-        try:
-            a.insert(i, int(get_input()))
-            i = i + 1
-        except ValueError:
+        a.insert(i, int(get_input()))
+        if a[i] > 50 or a[i] < 1:
             raise ValueError
-            print("Incorrect input. Try again")
+        i = i + 1
+
     return a
 
 
